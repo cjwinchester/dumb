@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <title>Dumb!</title>
+        <link href='http://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+        <style>
+        body, html {
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+            background: #000;
+            color: #fff;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+        .script {
+            font-family: 'Great Vibes', Arial, sans-serif;
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 130px;
+            white-space: nowrap;
+        }
+        #name {
+            color: red;
+            font-weight: bold;
+        }
+        @media (max-width: 1300px) {
+            .script {
+                font-size: 100px;
+            }
+        }
+        @media (max-width: 1020px) {
+            .script {
+                font-size: 70px;
+            }
+        }
+        @media (max-width: 730px) {
+            .script {
+                font-size: 40px;
+            }
+        }
+        @media (max-width: 440px) {
+            .script {
+                font-size: 26px;
+            }
+        }
+
+        </style>
+    </head>
+    <body>
+        <p>As of <span id="date"></span>, <span id="name"></span> is the</p>
+        <h1 class="script">Dumbest Motherfucker Alive</h1>
+    <script>
+    var dumbguy = "Cody John Winchester";
+    var months = [ "Jan.", "Feb.", "March", "April", "May", "June", "July", "Aug.", "Sept.", "Oct.", "Nov.", "Dec." ];
+    var d = new Date();
+    var thisdate = months[d.getUTCMonth()] + " " + d.getDate() + ", " + d.getUTCFullYear();
+
+    document.getElementById('name').innerHTML = dumbguy;
+    document.getElementById('date').innerHTML = thisdate;
+    document.title = dumbguy + ': Dumbest motherfucker alive';
+    </script>
+    </body>
+</html>
