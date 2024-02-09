@@ -14,29 +14,19 @@
         <h1>Dumbest Motherfucker Alive</h1>
     <script>
 
-    var dumbguy = "Matthew A Wynn";
+    let dumbguy = "Cody J. Winchester";
 
-    var months = [
-      "Jan.",
-      "Feb.",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "Aug.",
-      "Sept.",
-      "Oct.",
-      "Nov.",
-      "Dec."
-    ];
-
-    var d = new Date();
-
-    var thisdate = months[d.getUTCMonth()] + " " + d.getDate() + ", " + d.getUTCFullYear();
+    let date = (new Date()).toLocaleString(
+        'en',
+        {
+            'month': 'long',
+            'day': 'numeric',
+            'year': 'numeric'
+        }
+    );
 
     document.getElementById('name').innerHTML = dumbguy;
-    document.getElementById('date').innerHTML = thisdate;
+    document.getElementById('date').innerHTML = date;
     document.title = dumbguy + ': Dumbest motherfucker alive';
  
     </script>
